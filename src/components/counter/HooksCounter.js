@@ -6,7 +6,7 @@ const CounterHooks = props => {
     const [title, setTitle] = useState('My counter update');
     
     const countHandler = () => {
-       setCounter(counterState + 1);
+        setCounter(counterState + 1);
         console.log(counterState)
     };
     
