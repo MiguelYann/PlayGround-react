@@ -1,6 +1,7 @@
 import React from 'react';
 import './Person.css';
 import Person from "./Person";
+import styled from "styled-components";
 
 class AppPerson extends React.Component {
     state = {
@@ -36,15 +37,20 @@ class AppPerson extends React.Component {
     };
     
     render () {
-        const styleButton = {
-            backgroundColor: 'red',
-            margin: 'auto 220px',
-            height: '40px',
-            borderStyle: 'solid'
-        };
-        
+        const StyleButton = styled.button`
+            background-color: red;
+            color: white;
+            margin: auto 220px;
+            height: 40px;
+            borderStyle: solid;
+            
+            &:hover {
+              background-color: green;
+            }
+        `;
+    
         let persons = null;
-        
+    
         if (this.state.showPersons) {
             persons = (
                 <>
@@ -62,15 +68,17 @@ class AppPerson extends React.Component {
                 </>
             );
         }
-        
+    
+        let classes = ['bold', 'color'].join(" ");
+    
         return (
             <>
+                <p className={classes} style={{margin: '30px 30px'}}>List of person</p>
                 {persons}
-                <button
+                <StyleButton
                     onClick={this.togglePerson}
-                    style={{...styleButton}}
                 >Feature Toggle
-                </button>
+                </StyleButton>
             </>
         );
     }
