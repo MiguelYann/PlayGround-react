@@ -14,7 +14,9 @@ export function App (props) {
     return (
         <div>
             <h2 style={{...styleText}}>{props.appTitle}</h2>
-            <CardList/>
+            <div style={{display: 'grid'}}>
+                <CardList/>
+            </div>
         </div>
     );
 }
