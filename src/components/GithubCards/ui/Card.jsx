@@ -1,6 +1,5 @@
 import React from 'react';
 import '../styles/GithubCard.css';
-import * as PropTypes from 'prop-types';
 
 class Card extends React.Component {
     
@@ -17,10 +16,9 @@ class Card extends React.Component {
     }
 }
 
-Card.propTypes = {
-    urlPicture: PropTypes.string,
-    name: PropTypes.string.isRequired,
-    company: PropTypes.string
+
+Card.defaultProps = {
+    company: ''
 };
 
 export default Card;
