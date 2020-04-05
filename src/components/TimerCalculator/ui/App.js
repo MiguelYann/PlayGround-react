@@ -9,6 +9,7 @@ export function App () {
         fontSize: '60px',
         fontFamily: 'Jetbrains Mono'
     };
+    
     const title = <h2 style={{...styleTitle}}>Increment Number</h2>;
     const [getIncrement, setIncrement] = useState(0);
     const currentDate = new Date();

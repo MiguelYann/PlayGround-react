@@ -1,5 +1,5 @@
 import React from 'react';
-import './Person.css';
+import '../styles/Person.css';
 import Person from "./Person";
 import styled from "styled-components";
 
@@ -43,7 +43,7 @@ class AppPerson extends React.Component {
             margin: auto 220px;
             height: 40px;
             borderStyle: solid;
-            
+        
             &:hover {
               background-color: green;
             }

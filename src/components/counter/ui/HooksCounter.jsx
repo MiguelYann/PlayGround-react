@@ -4,6 +4,9 @@ const CounterHooks = props => {
     
     const [counterState, setCounter] = useState(0);
     const [title, setTitle] = useState('My counter update');
+    const styleText = {
+        color: counterState % 2 === 0 ? 'green' : 'red'
+    };
     
     const countHandler = () => {
         setCounter(counterState + 1);
@@ -13,7 +16,7 @@ const CounterHooks = props => {
     return (
         <>
             <p>{title}</p>
-            <h5>{counterState}</h5>
+            <h5 style={{...styleText}}>{counterState}</h5>
             <button onClick={countHandler}>Update counter</button>
         </>
     );
