@@ -11,12 +11,12 @@ export class App extends React.Component {
     
     addProfile = (profile) => {
         this.setState(prevState => {
-            if (prevState.profiles.length) {
+            if (!prevState.profiles.length) {
                 return ( {profiles: [...prevState.profiles, profile]} )
             }
             let excludeProfiles = prevState.profiles.filter(currentProfile => currentProfile.id === profile.id);
-            
-            return ( {profiles: excludeProfiles.length ? [...prevState.profiles, profile] : [...prevState.profiles]} )
+    
+            return ( {profiles: !excludeProfiles.length ? [...prevState.profiles, profile] : [...prevState.profiles]} )
         });
     };
     
