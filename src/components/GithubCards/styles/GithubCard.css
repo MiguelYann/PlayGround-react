@@ -1,5 +1,5 @@
 .github-profile {
-    margin: 4rem;
+    margin: 3rem;
     display: inline-block;
 }
 
@@ -17,7 +17,7 @@
 
 .Company {
     font-family: "JetBrains Mono";
-    color: brown;
+    color: cornflowerblue;
     font-weight: bolder;
 }
 
@@ -40,7 +40,7 @@ form {
     font-family: "JetBrains Mono";
     height: 50px;
     border-radius: 40px;
-    border: thin dotted brown;
+    border: thin dotted cornflowerblue;
     outline: none;
 }
 
@@ -50,7 +50,7 @@ form {
     font-size: 20px;
     color: white;
     height: 40px;
-    background-color: brown;
+    background-color: dodgerblue;
     border-radius: 10px;
     outline: none;
 }

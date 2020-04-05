@@ -6,6 +6,7 @@ const CardList = props => {
     return (
         <div style={{display: 'block'}}>
             {props.profiles.map(profile => <Card
+                handlerDelete={() => props.deleteItem(profile)}
                 name={profile.name}
                 key={profile.id}
                 company={profile.company}
