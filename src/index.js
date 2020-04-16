@@ -2,14 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
-import {App} from "./components/GithubCards/ui/App";
+import App from './components/GithubCards/ui/App';
 
 /**
  * You case choose the component you want to display here, and import it
  */
 
-function RootApp () {
-    ReactDOM.render(<App appTitle={"Github Profile"}/>, document.getElementById('root'));
+function RootApp() {
+  ReactDOM.render(<App appTitle="Github Profile" />, document.getElementById('root'));
 }
 
 RootApp();

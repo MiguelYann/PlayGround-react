@@ -1,31 +1,33 @@
 import React from 'react';
 import '../styles/GithubCard.css';
-import {MdDeleteForever} from "react-icons/md";
+import { MdDeleteForever } from 'react-icons/md';
+import * as PropTypes from 'prop-types';
 
-class Card extends React.Component {
-    
-    render () {
-        const styleIconButton = {
-            width: '30px',
-            height: '5%',
-            color: 'red'
-        };
-        return (
-            <div className="github-profile">
-                <img src={this.props.urlPicture} alt="profile-image"/>
-                <div className="info">
-                    <div className="name">{this.props.name}</div>
-                    <div className="Company">{this.props.company}</div>
-                </div>
-                <MdDeleteForever onClick={this.props.handlerDelete} style={{...styleIconButton}}/>
-            </div>
-        );
-    }
-}
+const Card = (props) => {
+  const { urlPicture, name, company, handlerDelete } = props;
+  const styleIconButton = {
+    width: '30px',
+    height: '5%',
+    color: 'red',
+  };
 
+  return (
+    <div className="github-profile">
+      <img src={urlPicture} alt="imageGithub" />
+      <div className="info">
+        <div className="name">{name}</div>
+        <div className="Company">{company}</div>
+      </div>
+      <MdDeleteForever onClick={handlerDelete} style={{ ...styleIconButton }} />
+    </div>
+  );
+};
 
-Card.defaultProps = {
-    company: ''
+Card.propTypes = {
+  company: PropTypes.string.isRequired,
+  urlPicture: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  handlerDelete: PropTypes.func.isRequired,
 };
 
 export default Card;
